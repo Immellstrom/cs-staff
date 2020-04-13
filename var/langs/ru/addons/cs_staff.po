@@ -1,0 +1,67 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "Addons::name::cs_staff"
+msgid "cs_staff"
+msgstr "Список персонала"
+
+msgctxt "Addons::description::cs_staff"
+msgid "cs_staff_list"
+msgstr "Добавляет возможность вывести список персонала"
+
+msgctxt "Languages::cs_staff.cs_staff_title"
+msgid "cs_staff_title"
+msgstr "Таблица персонала"
+
+msgctxt "Languages::cs_staff.new_staff"
+msgid "cs_staff.new_staff"
+msgstr "Новый сотрудник"
+
+msgctxt "Languages::cs_staff.editing_staff"
+msgid "cs_staff.editing_staff"
+msgstr "Редактирование сотрудника"
+
+msgctxt "Languages::cs_staff.position"
+msgid "cs_staff.position"
+msgstr "Должность"
+
+msgctxt "Languages::cs_staff.staffer"
+msgid "cs_staff.staffer"
+msgstr "Cотрудник"
+
+msgctxt "Languages::cs_staff.staff_no_orders"
+msgid "cs_staff.staff_no_orders"
+msgstr "Сотрудники не найдены"
+
+msgctxt "Languages::cs_staff.staff_menu"
+msgid "cs_staff.staff_menu"
+msgstr "Персонал"
+
+msgctxt "Languages::cs_staff.add_staff"
+msgid "cs_staff.add_staff"
+msgstr "Добавить сотрудника"
+
+msgctxt "Languages::cs_staff.cs_staff_details_notes"
+msgid "cs_staff.cs_staff_details_notes"
+msgstr "Заполните все поля и вернитесь к списку персонала"
+
+msgctxt "Languages::staff"
+msgid "cs_staff.staff"
+msgstr "Персонал"
+
+msgctxt "Languages::block_cs_staff"
+msgid "block_cs_staff"
+msgstr "Блок с персоналом"
+
+
+
+
+
+
+
+
+
