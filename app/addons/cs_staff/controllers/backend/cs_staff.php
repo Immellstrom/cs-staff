@@ -2,7 +2,7 @@
 
 use Tygh\Registry;
 
-if (!defined('BOOTSTRAP')) { die('Access denied'); }
+defined('BOOTSTRAP') or die('Access denied');
 
 if ($_SERVER['REQUEST_METHOD']	== 'POST') {
 
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD']	== 'POST') {
         $suffix = '.manage';
     }
 
-    return array(CONTROLLER_STATUS_OK, 'cs_staff' . $suffix);
+    return [CONTROLLER_STATUS_OK, 'cs_staff' . $suffix];
 }
 
 

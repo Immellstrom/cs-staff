@@ -10,7 +10,7 @@
 			</tr>
 		</thead>
 		<tbody>
-	        {foreach from=$cs_staff[0] item=staff}
+	        {foreach from=$cs_staff item=staff}
 	        <tr>
 	            <td>{$staff.firstname}</td>
 	            <td>{$staff.lastname}</td>
@@ -24,7 +24,6 @@
 	            <td colspan="4"><p class="ty-no-items">{__("cs_staff.staff_no_orders")}</p></td>
 	        </tr>
 	    	{/foreach}
-
 	    </tbody>
 	</table>
 {/if}

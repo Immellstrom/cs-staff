@@ -6,7 +6,6 @@ use Tygh\Tools\SecurityHelper;
 
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
-
 function fn_get_staff($params = array(), $lang_code = CART_LANGUAGE, $items_per_page = 0)
 {
     // Set default values to input params
@@ -57,10 +56,6 @@ function fn_get_staff($params = array(), $lang_code = CART_LANGUAGE, $items_per_
         $condition .= db_quote(' AND ?:staff_table.status = ?s', $params['status']);
     }
 
-    if (!empty($params['creation_date'])) {
-        $condition .= db_quote(' AND ?:staff_table.creation_date = ?s', $params['creation_date']);
-    }
-
     if (!empty($params['period']) && $params['period'] != 'A') {
         list($params['time_from'], $params['time_to']) = fn_create_periods($params);
         $condition .= db_quote(' AND (?:staff_table.creation_date >= ?i AND ?:staff_table.creation_date <= ?i)', $params['time_from'], $params['time_to']);
@@ -79,7 +74,7 @@ function fn_get_staff($params = array(), $lang_code = CART_LANGUAGE, $items_per_
     fn_set_hook('get_staff', $params, $condition, $sorting, $limit, $lang_code, $fields);
 
     if (!empty($params['items_per_page'])) {
-        $params['total_items'] = db_get_field("SELECT COUNT(*) FROM ?:staff_table");
+        $params['total_items'] = db_get_field("SELECT COUNT(*) FROM ?:staff_table WHERE 1 $condition");
         $limit = db_paginate($params['page'], $params['items_per_page'], $params['total_items']);
     }
 
@@ -88,10 +83,6 @@ function fn_get_staff($params = array(), $lang_code = CART_LANGUAGE, $items_per_
         "WHERE 1 ?p ?p ?p",
         'staff_id', implode(', ', $fields), $condition, $sorting, $limit
     );
-
-    if (!empty($params['item_ids'])) {
-        $cs_staff = fn_sort_by_ids($cs_staff, explode(',', $params['item_ids']), 'staff_id');
-    }
 
     fn_set_hook('get_staff_post', $cs_staff, $params);
 
@@ -125,19 +116,14 @@ function fn_get_staff_data($staff_id, $lang_code = CART_LANGUAGE)
     return $cs_staff;
 }
 
-
 function fn_delete_staff_by_id($staff_id)
 {
     if (!empty($staff_id)) {
         db_query("DELETE FROM ?:staff_table WHERE staff_id = ?i", $staff_id);
 
         fn_set_hook('delete_staff', $staff_id);
-
-        Block::instance()->removeDynamicObjectData('cs_staff', $staff_id);
-
     }
 }
-
 
 function fn_cs_staff_update_staff($data, $staff_id, $lang_code = DESCR_SL)
 {
