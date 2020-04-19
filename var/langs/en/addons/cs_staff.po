@@ -1,0 +1,69 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::cs_staff"
+msgid "cs_staff"
+msgstr "Staff list"
+
+msgctxt "Addons::description::cs_staff"
+msgid "cs_staff_list"
+msgstr "Adds the ability to list personnel"
+
+msgctxt "Languages::cs_staff.cs_staff_title"
+msgid "cs_staff_title"
+msgstr "Staff table"
+
+msgctxt "Languages::cs_staff.new_staff"
+msgid "cs_staff.new_staff"
+msgstr "Staff table"
+
+msgctxt "Languages::cs_staff.editing_staff"
+msgid "cs_staff.editing_staff"
+msgstr "Employee editing"
+
+msgctxt "Languages::cs_staff.position"
+msgid "cs_staff.position"
+msgstr "Position"
+
+msgctxt "Languages::cs_staff.staffer"
+msgid "cs_staff.staffer"
+msgstr "Employee"
+
+msgctxt "Languages::cs_staff.staff_no_orders"
+msgid "cs_staff.staff_no_orders"
+msgstr "No employees found"
+
+msgctxt "Languages::cs_staff.staff_menu"
+msgid "cs_staff.staff_menu"
+msgstr "Staff"
+
+msgctxt "Languages::cs_staff.add_staff"
+msgid "cs_staff.add_staff"
+msgstr "Add Employee"
+
+msgctxt "Languages::cs_staff.cs_staff_details_notes"
+msgid "cs_staff.cs_staff_details_notes"
+msgstr "Fill in all the fields and return to the staff list"
+
+msgctxt "Languages::staff"
+msgid "cs_staff.staff"
+msgstr "Staff"
+
+
+msgctxt "Languages::block_cs_staff"
+msgid "block_cs_staff"
+msgstr "Block with staff"
+
+
+
+
+
+
+
+
+
+
+
